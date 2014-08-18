@@ -1,0 +1,35 @@
+application: vkfeed
+version: 1
+runtime: python27
+threadsafe: true
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /favicon\.ico
+  static_files: images/favicon.ico
+  upload: favicon.ico
+
+- url: /images
+  static_dir: images
+
+- url: /robots\.txt
+  static_files: static/robots.txt
+  upload: static
+
+- url: /.*
+  script: vkfeed.main.app
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^images.orig(/.*)?
