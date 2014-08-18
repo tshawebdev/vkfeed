@@ -2,7 +2,7 @@
 
 from __future__ import unicode_literals
 
-APP_URL = 'http://avian-cosmos-676.appspot.com/'
+APP_URL = 'http://neat-chain-676.appspot.com/'
 '''URL of the application.'''
 
 API_URL = 'http://api.vk.com/'
